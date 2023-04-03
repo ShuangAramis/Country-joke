@@ -1,0 +1,19 @@
+<div class="country-page-container">
+
+  <div class="country-filter-actions">
+    <button (click)="filterCountriesByCurrency('USD')">Show dollar country</button>
+    <button (click)="filterCountriesByLanguage('fra')">Show french country</button>
+    <button (click)="filterCountriesByRegion('Europe')">Show europe country</button>
+    <button (click)="sortCountriesByAlphabet()">Reset</button>
+  </div>
+
+  <div class="country-list-container">
+    <app-country
+      class="country-item"
+      *ngFor="let country of displayedCountries"
+      [country]="country">
+    </app-country>
+  </div>
+
+
+</div>
